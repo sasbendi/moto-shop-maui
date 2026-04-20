@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="moto.shop.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="20"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Welcome Back"
+                FontSize="32"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Login to your account"
+                FontSize="14"
+                TextColor="Gray"
+                HorizontalOptions="Center" />
+
+            <BoxView HeightRequest="30" Opacity="0"/>
+
+            <Entry
+                x:Name="EmailEntry"
+                Placeholder="Email"
+                HeightRequest="50"
+                BackgroundColor="#F2F2F2" />
+
+            <Entry
+                x:Name="PasswordEntry"
+                Placeholder="Password"
+                IsPassword="True"
+                HeightRequest="50"
+                BackgroundColor="#F2F2F2" />
+
+            <Label
+                x:Name="ErrorLabel"
+                TextColor="Red"
+                FontSize="12" />
+
+            <Button
+                Text="Login"
+                HeightRequest="50"
+                CornerRadius="10"
+                BackgroundColor="#512BD4"
+                TextColor="White"
+                Clicked="OnLoginClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

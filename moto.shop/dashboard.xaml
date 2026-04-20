@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="moto.shop.dashboard"
+             Title="Dashboard">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Dashboard"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+
+            <!-- INPUTS -->
+            <Entry x:Name="NameEntry" Placeholder="Name"/>
+            <Entry x:Name="EmailEntry" Placeholder="Email"/>
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True"/>
+            <Entry x:Name="IdEntry" Placeholder="User ID (for update/delete)" Keyboard="Numeric"/>
+
+            <!-- BUTTONS -->
+            <Button Text="Create User" Clicked="OnCreateClicked"/>
+            <Button Text="Get All Users" Clicked="OnGetAllClicked"/>
+            <Button Text="Update User Name" Clicked="OnUpdateClicked"/>
+            <Button Text="Delete User" Clicked="OnDeleteClicked"/>
+
+            <!-- RESULT -->
+            <Label x:Name="ResultLabel"
+                   FontSize="12"
+                   Margin="0,20,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
