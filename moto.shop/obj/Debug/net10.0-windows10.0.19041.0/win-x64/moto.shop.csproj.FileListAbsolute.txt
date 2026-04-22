@@ -516,3 +516,5 @@ C:\Users\sasbendi\source\repos\moto.shop\moto.shop\obj\Debug\net10.0-windows10.0
 C:\Users\sasbendi\source\repos\moto.shop\moto.shop\obj\Debug\net10.0-windows10.0.19041.0\win-x64\qualifiers.txt
 C:\Users\sasbendi\source\repos\moto.shop\moto.shop\obj\Debug\net10.0-windows10.0.19041.0\win-x64\qualifiers.txt.intermediate
 C:\Users\sasbendi\source\repos\moto.shop\moto.shop\obj\Debug\net10.0-windows10.0.19041.0\win-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Users\sasbendi\source\repos\moto.shop\moto.shop\bin\Debug\net10.0-windows10.0.19041.0\win-x64\Newtonsoft.Json.dll
+C:\Users\sasbendi\source\repos\moto.shop\moto.shop\obj\Debug\net10.0-windows10.0.19041.0\win-x64\moto.shop.sourcelink.json

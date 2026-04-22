@@ -8,7 +8,7 @@ namespace moto.shop.Services
         private readonly HttpClient _httpClient;
         private string _token;
 
-        private const string BaseUrl = "localhost:8000/api/users"; // CHANGE if needed
+        private const string BaseUrl = "http://localhost:8000/api/";
 
         public ApiService()
         {
@@ -44,16 +44,14 @@ namespace moto.shop.Services
             var json = await response.Content.ReadAsStringAsync();
             var doc = JsonDocument.Parse(json);
 
-            if (doc.RootElement.TryGetProperty("token", out var tokenProp))
+            // ✅ YOUR API FORMAT: [ user, token ]
+            if (doc.RootElement.ValueKind == JsonValueKind.Array &&
+                doc.RootElement.GetArrayLength() > 1)
             {
-                _token = tokenProp.GetString();
-            }
-            else if (doc.RootElement.TryGetProperty("data", out var dataProp))
-            {
-                _token = dataProp.GetProperty("token").GetString();
+                _token = doc.RootElement[1].GetString();
             }
 
-            return true;
+            return !string.IsNullOrEmpty(_token);
         }
 
         // ================= GET CURRENT USER =================
